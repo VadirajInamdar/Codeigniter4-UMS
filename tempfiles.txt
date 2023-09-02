@@ -1,0 +1,26 @@
+// $password = md5($password);
+        $data = $userModel->where('email', $email)->first();
+        echo "Entered Password: ".$password.'   '."Fetched Password: ".md5($data['password']);
+        /*
+        // if($data){
+            // $pass = $data['password'];
+            // echo "Pass=".' '.$pass;
+            // echo "Passowrd inputted:".' '.$password;
+            // if ($pass == $password){
+            //     echo "Login Succesful\n";
+            //     $session->setFlashdata('session_message', 'Login succesful.');
+            //     $fname = $data['fname'];
+            //     $lname = $data['lname'];
+            //     $email_id = $data['email'];
+            //     $contact = $data['contact'];
+            //     $UserInfo = [$fname, $lname, $email_id, $contact];
+            //     $session->set($UserInfo);
+            //     echo $UserInfo[0].' '.$UserInfo[1].' '.$UserInfo[2].' '.$UserInfo[3];
+                
+            // }
+            // else
+            // {
+            //     $session->setFlashdata('session_message', 'Login unsuccesful.');
+            //     return redirect()->to('login');
+            // }
+            // return redirect()->to('LoggedUser');*/
